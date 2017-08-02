@@ -1,0 +1,4 @@
+ngx_addon_name=k8s_ingress_module
+HTTP_MODULES="$HTTP_MODULES k8s_ingress_module"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/k8s_ingress_module.c"
+have=NDK_SET_VAR . auto/have

@@ -1,0 +1,7 @@
+FROM nginx-dev:1.8
+MAINTAINER yue9944882@github.com
+
+ADD . /go/src/github.com/yue9944882/k8s_ingress_module/
+RUN cd /go/src/github.com/yue9944882/k8s_ingress_module/ && \
+    ln -sf /go/src/github.com/yue9944882/k8s_ingress_module/third-party/nginx/objs/nginx target/nginx
+RUN ln -sf /go/src/github.com/yue9944882/k8s_ingress_module/objs/module.so /usr/local/lib/module.so
